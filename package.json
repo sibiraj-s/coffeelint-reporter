@@ -1,0 +1,23 @@
+{
+  "name": "coffeelint-reporter",
+  "version": "1.0.0",
+  "description": "A Reporter for Coffeelint",
+  "main": "index.js",
+  "author": "Sibiraj-S",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Sibiraj-S/coffeelint-reporter.git"
+  },
+  "homepage": "https://github.com/Sibiraj-S/coffeelint-reporter",
+  "bugs": {
+    "url": "https://github.com/Sibiraj-S/coffeelint-reporter/issues"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "cli-table3": "^0.5.1"
+  }
+}
