@@ -79,19 +79,27 @@ const reporter = function (fileName = '', results = []) {
     return;
 };
 
-const PrettyReporter = function (error_report) {
-    this.error_report = error_report;
-};
+const CoffeelintReporter = (function () {
 
-PrettyReporter.prototype.publish = function () {
-    const reports = this.error_report.paths;
+    CoffeelintReporter.reporter = reporter;
 
-    for (const fileName in reports) {
-        if (fileName) {
-            results = reports[fileName];
-            reporter(fileName, results);
-        }
+    function CoffeelintReporter(error_report) {
+        this.error_report = error_report;
     }
-};
 
-module.exports = PrettyReporter;
+    CoffeelintReporter.prototype.publish = function () {
+        const reports = this.error_report.paths;
+
+        for (const fileName in reports) {
+            if (fileName) {
+                results = reports[fileName];
+                reporter(fileName, results);
+            }
+        }
+    };
+
+    return CoffeelintReporter;
+
+})();
+
+module.exports = CoffeelintReporter;
