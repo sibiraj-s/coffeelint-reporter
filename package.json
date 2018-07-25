@@ -1,6 +1,6 @@
 {
   "name": "coffeelint-reporter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Reporter for Coffeelint",
   "main": "index.js",
   "author": "Sibiraj-S",
