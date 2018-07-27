@@ -4,6 +4,7 @@
   "description": "A Reporter for Coffeelint",
   "author": "Sibiraj-S",
   "license": "MIT",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/Sibiraj-S/coffeelint-reporter.git"
@@ -17,8 +18,8 @@
   },
   "scripts": {
     "precommit": "npm run test",
-    "prerelease": "sh ./scripts/prerelease.sh",
     "prepublishOnly": "node ./scripts/prepublish.js",
+    "prerelease": "sh ./scripts/prerelease.sh",
     "release": "sh ./scripts/release.sh",
     "test": "grunt"
   },
