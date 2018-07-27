@@ -18,6 +18,7 @@
   "scripts": {
     "precommit": "npm run test",
     "prerelease": "sh ./scripts/prerelease.sh",
+    "prepublishOnly": "node ./scripts/prepublish.js",
     "release": "sh ./scripts/release.sh",
     "test": "grunt"
   },
