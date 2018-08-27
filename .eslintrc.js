@@ -9,8 +9,5 @@ module.exports = {
     'comma-dangle': ['error', 'never'],
     'operator-linebreak': ['error', 'before'],
     'padded-blocks': ['error', 'never']
-  },
-  globals: {
-    angular: true
   }
 };
