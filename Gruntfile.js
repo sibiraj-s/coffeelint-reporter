@@ -4,7 +4,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     eslint: {
       target: [
-        'coffeelint-reporte.js',
+        'coffeelint-reporter.js',
         'scripts/**/*.js',
         'Gruntfile.js'
       ]

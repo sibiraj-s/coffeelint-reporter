@@ -1,8 +1,6 @@
 {
   "editor.detectIndentation": false,
   "editor.tabSize": 2,
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -10,5 +8,8 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "**/node_modules": true
-  }
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true
 }
