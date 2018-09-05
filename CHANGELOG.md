@@ -11,6 +11,12 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## Unreleased
+
+#### Dependency Updates
+
+* update eslint to v5.5.0 ([eac67dd](https://github.com/Sibiraj-S/coffeelint-reporter/commit/eac67dd))
+
 ## v1.0.4 (2018-08-29)
 
 #### Internal
