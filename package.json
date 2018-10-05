@@ -17,7 +17,6 @@
     "node": ">= 8.0.0"
   },
   "scripts": {
-    "precommit": "npm run test",
     "prepublishOnly": "node ./scripts/prepublish.js",
     "prerelease": "sh ./scripts/prerelease.sh",
     "release": "sh ./scripts/release.sh",
@@ -28,14 +27,14 @@
     "cli-table3": "^0.5.1"
   },
   "devDependencies": {
-    "eslint": "^5.5.0",
+    "eslint": "^5.6.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "grunt": "^1.0.3",
     "grunt-eslint": "^21.0.0",
-    "husky": "^0.14.3"
+    "husky": "^1.1.0"
   }
 }
