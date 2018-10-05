@@ -2,16 +2,16 @@
   "name": "coffeelint-reporter",
   "version": "1.0.4",
   "description": "A Reporter for Coffeelint",
-  "author": "Sibiraj-S",
+  "author": "sibiraj-s",
   "license": "MIT",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Sibiraj-S/coffeelint-reporter.git"
+    "url": "git+ssh://git@github.com/sibiraj-s/coffeelint-reporter.git"
   },
-  "homepage": "https://github.com/Sibiraj-S/coffeelint-reporter",
+  "homepage": "https://github.com/sibiraj-s/coffeelint-reporter",
   "bugs": {
-    "url": "https://github.com/Sibiraj-S/coffeelint-reporter/issues"
+    "url": "https://github.com/sibiraj-s/coffeelint-reporter/issues"
   },
   "engines": {
     "node": ">= 8.0.0"
