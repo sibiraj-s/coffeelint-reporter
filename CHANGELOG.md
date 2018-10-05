@@ -11,11 +11,18 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
-## Unreleased
+## v1.0.5 (2018-10-05)
 
 #### Dependency Updates
 
-* update eslint to v5.5.0 ([eac67dd](https://github.com/sibiraj-s/coffeelint-reporter/commit/eac67dd))
+* update eslint to v5.6.1 ([0a3be13](https://github.com/sibiraj-s/coffeelint-reporter/commit/0a3be13))
+* update eslint-plugin-promise to v4.0.1 ([0a3be13](https://github.com/sibiraj-s/coffeelint-reporter/commit/0a3be13))
+* update husky to v1.1.0 ([0a3be13](https://github.com/sibiraj-s/coffeelint-reporter/commit/0a3be13))
+
+#### Internal
+
+* remove vscode settings in favour of editorconfig ([167d21a](https://github.com/sibiraj-s/coffeelint-reporter/commit/167d21a))
+* update github username ([ffe96c0](https://github.com/sibiraj-s/coffeelint-reporter/commit/ffe96c0))
 
 ## v1.0.4 (2018-08-29)
 
