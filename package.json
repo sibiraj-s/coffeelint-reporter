@@ -5,14 +5,9 @@
   "author": "sibiraj-s",
   "license": "MIT",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/sibiraj-s/coffeelint-reporter.git"
-  },
+  "repository": "https://github.com/sibiraj-s/coffeelint-reporter.git",
   "homepage": "https://github.com/sibiraj-s/coffeelint-reporter",
-  "bugs": {
-    "url": "https://github.com/sibiraj-s/coffeelint-reporter/issues"
-  },
+  "bugs": "https://github.com/sibiraj-s/coffeelint-reporter/issues",
   "engines": {
     "node": "^10"
   },
