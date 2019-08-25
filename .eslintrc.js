@@ -5,6 +5,7 @@ module.exports = {
   },
   rules: {
     semi: ['error', 'always'],
-    'operator-linebreak': ['error', 'before']
+    'operator-linebreak': ['error', 'before'],
+    'quote-props': ['error', 'consistent']
   }
 }
