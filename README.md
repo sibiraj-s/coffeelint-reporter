@@ -2,7 +2,8 @@
 
 > A Reporter for Coffeelint
 
-[![NPM Version](https://img.shields.io/npm/v/coffeelint-reporter.svg)](https://www.npmjs.com/package/coffeelint-reporter) [![License](https://img.shields.io/npm/l/coffeelint-reporter.svg)](https://github.com/sibiraj-s/coffeelint-reporter/blob/master/LICENSE)
+[![NPM Version](https://img.shields.io/npm/v/coffeelint-reporter.svg)](https://www.npmjs.com/package/coffeelint-reporter)
+[![License](https://img.shields.io/npm/l/coffeelint-reporter.svg)](https://github.com/sibiraj-s/coffeelint-reporter/blob/master/LICENSE)
 [![Build Status](https://travis-ci.com/sibiraj-s/coffeelint-reporter.svg?branch=master)](https://travis-ci.com/sibiraj-s/coffeelint-reporter)
 
 ## Install
