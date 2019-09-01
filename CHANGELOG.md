@@ -11,6 +11,25 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.0.6 (2019-09-01)
+
+#### Dependency Updates
+
+- update chalk to v2.4.2 ([c6e8625](https://github.com/sibiraj-s/coffeelint-reporter/commit/c6e8625))
+- update eslint to v6.3.0 ([8b3bb2a](https://github.com/sibiraj-s/coffeelint-reporter/commit/8b3bb2a))
+- update eslint-config-standard to v14.1.0 ([8b3bb2a](https://github.com/sibiraj-s/coffeelint-reporter/commit/8b3bb2a))
+- update eslint-plugin-node to v9.2.0 ([8b3bb2a](https://github.com/sibiraj-s/coffeelint-reporter/commit/8b3bb2a))
+- update eslint-plugin-import to v2.18.2 ([c6e8625](https://github.com/sibiraj-s/coffeelint-reporter/commit/c6e8625))
+- update eslint-plugin-promise to v4.2.1 ([c6e8625](https://github.com/sibiraj-s/coffeelint-reporter/commit/c6e8625))
+- update eslint-plugin-standard to v4.0.1 ([c6e8625](https://github.com/sibiraj-s/coffeelint-reporter/commit/c6e8625))
+- update husky to v3.0.5 ([81fc115](https://github.com/sibiraj-s/coffeelint-reporter/commit/81fc115))
+
+#### Internal
+
+- remove grunt-eslint in favour of eslint cli ([dfb01be](https://github.com/sibiraj-s/coffeelint-reporter/commit/dfb01be))
+- update LICENSE ([ee24cf6](https://github.com/sibiraj-s/coffeelint-reporter/commit/ee24cf6))
+- update eslint rules ([c6e8625](https://github.com/sibiraj-s/coffeelint-reporter/commit/c6e8625))
+
 ## v1.0.5 (2018-10-05)
 
 #### Dependency Updates
