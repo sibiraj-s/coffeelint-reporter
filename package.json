@@ -8,26 +8,36 @@
   "repository": "https://github.com/sibiraj-s/coffeelint-reporter.git",
   "homepage": "https://github.com/sibiraj-s/coffeelint-reporter",
   "bugs": "https://github.com/sibiraj-s/coffeelint-reporter/issues",
+  "main": "index.js",
   "engines": {
     "node": "^10"
   },
+  "files": [
+    "index.js",
+    "reporter.js"
+  ],
   "scripts": {
     "prepublishOnly": "node ./scripts/prepublish.js",
     "prerelease": "sh ./scripts/prerelease.sh",
     "release": "sh ./scripts/release.sh",
-    "test": "eslint . --ignore-path .gitignore"
+    "test": "jest"
   },
   "dependencies": {
     "chalk": "^3.0.0",
     "cli-table3": "^0.5.1"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "babel-eslint": "^10.0.3",
+    "coffeelint": "^2.1.0",
     "eslint": "^6.7.2",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jest": "^23.1.1",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "husky": "^3.1.0"
+    "husky": "^3.1.0",
+    "jest": "^24.9.0"
   }
 }

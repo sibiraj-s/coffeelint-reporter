@@ -23,10 +23,17 @@ Refer coffelint usage with cli [here](http://www.coffeelint.org/#usage)
 ### Usage with Runtime API
 
 ```js
-const reporter = require('coffeelint-reporter').reporter;
+const reporter = require('coffeelint-reporter/reporter');
 
-reporter(fileName, lintResults)
+const options = {
+  log: false
+};
+
+const log = reporter(fileName, lintResults, options);
+console.log(log); // formatted log {string}
 ```
 
-- **fileName** [`String`] Headlint for the report
-- **lintResults** [`Object`] Results provided by `coffeelint.lint`, refer [coffeelint api](http://www.coffeelint.org/#api)
+- **fileName** `{string}` - Headlint for the report
+- **lintResults** `{Array<object>}` - Results provided by `coffeelint.lint`, refer [coffeelint api](http://www.coffeelint.org/#api)
+- **options** `{object}` - Options for reporter
+  - **log** `{boolean}` - enable or disable logging to console
