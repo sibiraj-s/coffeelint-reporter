@@ -10,7 +10,7 @@
   "bugs": "https://github.com/sibiraj-s/coffeelint-reporter/issues",
   "main": "index.js",
   "engines": {
-    "node": "^10"
+    "node": ">=10"
   },
   "files": [
     "index.js",
