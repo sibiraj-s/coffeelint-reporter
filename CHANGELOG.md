@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 > **Tags**
+>
 > - Features
 > - Bug Fixes
 > - Performance Improvements
@@ -10,6 +11,31 @@ All notable changes to this project will be documented in this file.
 > - Breaking Changes
 > - Documentation
 > - Internal
+
+## v2.0.0 (2019-12-12)
+
+#### Internal
+
+- add jest unit tests ([149f2d1](https://github.com/sibiraj-s/coffeelint-reporter/commit/149f2d1))
+- migrate to github actions from travis-ci ([d6ad1ce](https://github.com/sibiraj-s/coffeelint-reporter/commit/d6ad1ce))
+
+#### Dependency Updates
+
+- bump devDependencies ([0eaba00](https://github.com/sibiraj-s/coffeelint-reporter/commit/0eaba00))
+
+#### Breaking Changes
+
+From
+
+```js
+require('coffeelint-reporter').reporter;
+```
+
+To
+
+```js
+require('coffeelint-reporter/reporter');
+```
 
 ## v1.0.6 (2019-09-01)
 
