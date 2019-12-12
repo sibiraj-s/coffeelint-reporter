@@ -17,9 +17,6 @@
     "reporter.js"
   ],
   "scripts": {
-    "prepublishOnly": "node ./scripts/prepublish.js",
-    "prerelease": "sh ./scripts/prerelease.sh",
-    "release": "sh ./scripts/release.sh",
     "test": "jest"
   },
   "dependencies": {
