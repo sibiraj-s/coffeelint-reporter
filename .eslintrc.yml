@@ -1,0 +1,23 @@
+extends:
+  - standard
+
+parser: babel-eslint
+
+plugins:
+  - jest
+
+rules:
+  semi:
+    - error
+    - always
+
+  operator-linebreak:
+    - error
+    - before
+
+  quote-props:
+    - error
+    - consistent-as-needed
+
+env:
+  jest/globals: true
