@@ -9,6 +9,10 @@ const fixtures = (glob) => path.resolve(__dirname, 'fixtures', glob);
 const reporter = jest.fn(actualReporter);
 console.log = jest.fn();
 
+const warnSign = '⚠';
+const errSign = '✖';
+const tickSign = '✔';
+
 describe('linux', () => {
   it('should report correctly for file without errors or warnings', async () => {
     const fileName = 'file.coffee';
@@ -38,9 +42,9 @@ describe('linux', () => {
     expect(console.log).toHaveBeenCalledWith(expect.any(String));
 
     expect(console.log.mock.calls[0][0]).toContain('No Problem');
-    expect(log).toContain('No Problem');
-    expect(log).not.toContain('warning');
-    expect(log).not.toContain('error');
+    expect(log).toContain(tickSign);
+    expect(log).not.toContain(warnSign);
+    expect(log).not.toContain(errSign);
   });
 
   it('should report warnings correctly', async () => {
@@ -69,10 +73,9 @@ describe('linux', () => {
 
     expect(console.log).toHaveBeenCalledTimes(1);
 
-    expect(log).not.toContain('No Problem');
-    expect(log).toContain('warning');
-    expect(log).toContain('⚠');
-    expect(log).not.toContain('error');
+    expect(log).not.toContain(tickSign);
+    expect(log).toContain(warnSign);
+    expect(log).not.toContain(errSign);
   });
 
   it('should report errors correctly', async () => {
@@ -95,9 +98,9 @@ describe('linux', () => {
 
     expect(console.log).toHaveBeenCalledTimes(1);
 
-    expect(log).not.toContain('No Problem');
-    expect(log).not.toContain('warning');
-    expect(log).toContain('error');
+    expect(log).not.toContain(tickSign);
+    expect(log).not.toContain(warnSign);
+    expect(log).toContain(errSign);
   });
 
   it('should report errors and warnings correctly', async () => {
@@ -126,9 +129,9 @@ describe('linux', () => {
 
     expect(console.log).toHaveBeenCalledTimes(1);
 
-    expect(log).not.toContain('No Problem');
-    expect(log).toContain('warning');
-    expect(log).toContain('error');
+    expect(log).not.toContain(tickSign);
+    expect(log).toContain(warnSign);
+    expect(log).toContain(errSign);
   });
 
   it('should report without filename', async () => {
@@ -157,9 +160,10 @@ describe('linux', () => {
 
     expect(console.log).toHaveBeenCalledTimes(1);
 
-    expect(log).not.toContain('No Problem');
-    expect(log).toContain('warning');
-    expect(log).toContain('error');
+    expect(log).not.toContain(fileName);
+    expect(log).not.toContain(tickSign);
+    expect(log).toContain(warnSign);
+    expect(log).toContain(errSign);
   });
 
   it('should not log when logging is disabled', async () => {
@@ -187,9 +191,9 @@ describe('linux', () => {
     expect(reporter).toHaveReturned();
     expect(console.log).not.toHaveBeenCalled();
 
-    expect(log).not.toContain('No Problem');
-    expect(log).toContain('warning');
-    expect(log).toContain('error');
+    expect(log).not.toContain(tickSign);
+    expect(log).toContain(warnSign);
+    expect(log).toContain(errSign);
   });
 
   it('should not throw errors when results are not passed', async () => {
@@ -198,7 +202,10 @@ describe('linux', () => {
 
     expect(reporter).toHaveReturned();
     expect(console.log).toHaveBeenCalled();
-    expect(log).toContain('No Problem');
+
+    expect(log).toContain(tickSign);
+    expect(log).not.toContain(warnSign);
+    expect(log).not.toContain(errSign);
   });
 
   it('should have multiple warnings', async () => {
@@ -226,9 +233,9 @@ describe('linux', () => {
     expect(reporter).toHaveReturned();
     expect(console.log).toHaveBeenCalled();
 
-    expect(log).not.toContain('No Problem');
-    expect(log).toContain('warnings');
-    expect(log).not.toContain('error');
+    expect(log).not.toContain(tickSign);
+    expect(log).toContain(warnSign);
+    expect(log).not.toContain(errSign);
   });
 });
 
@@ -273,10 +280,8 @@ describe('windows <win32>', () => {
     expect(console.log).toHaveBeenCalled();
 
     expect(log).not.toContain('No Problem');
-    expect(log).toContain('warning');
-    expect(log).not.toContain('⚠');
-    expect(log).not.toContain('✖');
-    expect(log).not.toContain('✔');
-    expect(log).toContain('error');
+    expect(log).not.toContain(warnSign);
+    expect(log).not.toContain(errSign);
+    expect(log).not.toContain(tickSign);
   });
 });

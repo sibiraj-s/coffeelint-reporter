@@ -31,33 +31,24 @@ const reporter = function (fileName = '', results = [], opts = {}) {
   const options = Object.assign({}, defaultOptions, opts);
 
   const isWin = process.platform === 'win32';
-  const warnSign = '' + (isWin ? '' : '⚠');
-  const errSign = '' + (isWin ? '' : '✖');
-  const tickSign = '' + (isWin ? '' : '✔');
+  const warnSign = isWin ? '' : '⚠';
+  const errSign = isWin ? '' : '✖';
+  const tickSign = isWin ? '' : '✔';
 
+  let report;
   let errors = 0;
   let warnings = 0;
 
-  let formattedReport;
-
   if (fileName) {
-    formattedReport = '\n' + chalk.green(chalk.underline(fileName)) + '\n';
+    report = '\n' + chalk.green(chalk.underline(fileName)) + '\n';
   } else {
-    formattedReport = '\n';
+    report = '\n';
   }
 
   if (results.length) {
     results.forEach(function (result) {
-      let hasError = false;
-
-      if (result.level === 'error') {
-        hasError = true;
-        errors++;
-      }
-
-      if (result.level === 'warn') {
-        warnings++;
-      }
+      const hasError = result.level === 'error';
+      hasError ? errors++ : warnings++;
 
       table.push([
         chalk[hasError ? 'red' : 'yellow'](hasError ? errSign : warnSign),
@@ -67,34 +58,20 @@ const reporter = function (fileName = '', results = [], opts = {}) {
       ]);
     });
 
-    formattedReport += table.toString();
+    report += table.toString();
   }
 
-  if (warnings || errors) {
-    formattedReport += '\n\n Completd with ';
-
-    if (warnings) {
-      formattedReport += chalk.yellow(warnings + ' warning' + (warnings === 1 ? '' : 's'));
-    }
-
-    if (warnings && errors) {
-      formattedReport += ', ';
-    }
-
-    if (errors) {
-      formattedReport += chalk.red(errors + ' error' + (errors === 1 ? '' : 's'));
-    }
-  } else {
-    formattedReport += chalk.green(tickSign + ' No Problem');
+  if (!warnings && !errors) {
+    report += chalk.green(` ${tickSign} No Problems`);
   }
 
-  formattedReport = formattedReport.replace(/(\r\n|\r|\n){2,}/g, '$1\n');
+  report = report.replace(/(\r\n|\r|\n){2,}/g, '$1\n');
 
   if (options.log) {
-    console.log(formattedReport);
+    console.log(report);
   }
 
-  return formattedReport;
+  return report;
 };
 
 module.exports = reporter;
