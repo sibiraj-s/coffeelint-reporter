@@ -10,7 +10,14 @@ All notable changes to this project will be documented in this file.
 > - Dependency Updates
 > - Breaking Changes
 > - Documentation
+> - Enhancements
 > - Internal
+
+## v2.0.1 (2019-12-13)
+
+#### Enhancements
+
+- Remove errors and warnings count in log ([30f418f](https://github.com/sibiraj-s/coffeelint-reporter/commit/30f418f))
 
 ## v2.0.0 (2019-12-12)
 
