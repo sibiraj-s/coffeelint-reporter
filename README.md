@@ -1,10 +1,12 @@
 # coffeelint-reporter
 
-> A Reporter for Coffeelint
-
 [![NPM Version](https://img.shields.io/npm/v/coffeelint-reporter.svg)](https://www.npmjs.com/package/coffeelint-reporter)
 [![License](https://img.shields.io/npm/l/coffeelint-reporter.svg)](https://github.com/sibiraj-s/coffeelint-reporter/blob/master/LICENSE)
 [![Tests](https://github.com/sibiraj-s/coffeelint-reporter/workflows/Tests/badge.svg)](https://github.com/sibiraj-s/coffeelint-reporter/actions)
+
+> A Reporter for Coffeelint
+
+![Sample](assets/report.png)
 
 ## Install
 
