@@ -13,6 +13,16 @@ All notable changes to this project will be documented in this file.
 > - Enhancements
 > - Internal
 
+## v2.0.2 (2020-04-14)
+
+#### Enhancements
+
+- use `@coffeelint/cli` instead of `coffeelint` ([88bf44c](https://github.com/sibiraj-s/coffeelint-reporter/commit/88bf44c))
+
+#### Dependency Updates
+
+- bump devDependencies ([36b581d](https://github.com/sibiraj-s/coffeelint-reporter/commit/36b581d))
+
 ## v2.0.1 (2019-12-13)
 
 #### Enhancements

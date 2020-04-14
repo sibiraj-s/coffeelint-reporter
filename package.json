@@ -1,6 +1,6 @@
 {
   "name": "coffeelint-reporter",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A Reporter for Coffeelint",
   "author": "sibiraj-s",
   "license": "MIT",
