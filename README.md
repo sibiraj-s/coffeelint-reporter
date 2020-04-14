@@ -36,6 +36,6 @@ console.log(log); // formatted log {string}
 ```
 
 - **fileName** `{string}` - Headlint for the report
-- **lintResults** `{Array<object>}` - Results provided by `coffeelint.lint`, refer [coffeelint api](http://www.coffeelint.org/#api)
+- **lintResults** `{Array<object>}` - Results provided by `coffeelint.lint`, refer [coffeelint api](https://coffeelint.github.io/#api)
 - **options** `{object}` - Options for reporter
   - **log** `{boolean}` - enable or disable logging to console
