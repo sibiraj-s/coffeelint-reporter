@@ -23,14 +23,14 @@ describe('linux', () => {
         name: 'max_line_length',
         value: 100,
         level: 'warn',
-        limitComments: true
+        limitComments: true,
       },
       no_trailing_whitespace: {
         name: 'no_trailing_whitespace',
         level: 'ignore',
         allowed_in_comments: false,
-        allowed_in_empty_lines: false
-      }
+        allowed_in_empty_lines: false,
+      },
     };
 
     const result = coffeelint.lint(coffee, coffeelintConfig);
@@ -56,14 +56,14 @@ describe('linux', () => {
         name: 'max_line_length',
         value: 40,
         level: 'warn',
-        limitComments: true
+        limitComments: true,
       },
       no_trailing_whitespace: {
         name: 'no_trailing_whitespace',
         level: 'ignore',
         allowed_in_comments: false,
-        allowed_in_empty_lines: false
-      }
+        allowed_in_empty_lines: false,
+      },
     };
 
     const result = coffeelint.lint(coffee, coffeelintConfig);
@@ -87,8 +87,8 @@ describe('linux', () => {
         name: 'max_line_length',
         value: 40,
         level: 'error',
-        limitComments: true
-      }
+        limitComments: true,
+      },
     };
 
     const result = coffeelint.lint(coffee, coffeelintConfig);
@@ -112,14 +112,14 @@ describe('linux', () => {
         name: 'max_line_length',
         value: 40,
         level: 'warn',
-        limitComments: true
+        limitComments: true,
       },
       no_trailing_whitespace: {
         name: 'no_trailing_whitespace',
         level: 'error',
         allowed_in_comments: false,
-        allowed_in_empty_lines: false
-      }
+        allowed_in_empty_lines: false,
+      },
     };
 
     const result = coffeelint.lint(coffee, coffeelintConfig);
@@ -143,14 +143,14 @@ describe('linux', () => {
         name: 'max_line_length',
         value: 40,
         level: 'warn',
-        limitComments: true
+        limitComments: true,
       },
       no_trailing_whitespace: {
         name: 'no_trailing_whitespace',
         level: 'error',
         allowed_in_comments: false,
-        allowed_in_empty_lines: false
-      }
+        allowed_in_empty_lines: false,
+      },
     };
 
     const result = coffeelint.lint(coffee, coffeelintConfig);
@@ -175,14 +175,14 @@ describe('linux', () => {
         name: 'max_line_length',
         value: 40,
         level: 'warn',
-        limitComments: true
+        limitComments: true,
       },
       no_trailing_whitespace: {
         name: 'no_trailing_whitespace',
         level: 'error',
         allowed_in_comments: false,
-        allowed_in_empty_lines: false
-      }
+        allowed_in_empty_lines: false,
+      },
     };
 
     const result = coffeelint.lint(coffee, coffeelintConfig);
@@ -217,14 +217,14 @@ describe('linux', () => {
         name: 'max_line_length',
         value: 40,
         level: 'warn',
-        limitComments: true
+        limitComments: true,
       },
       no_trailing_whitespace: {
         name: 'no_trailing_whitespace',
         level: 'warn',
         allowed_in_comments: false,
-        allowed_in_empty_lines: false
-      }
+        allowed_in_empty_lines: false,
+      },
     };
 
     const result = coffeelint.lint(coffee, coffeelintConfig);
@@ -244,13 +244,13 @@ describe('windows <win32>', () => {
 
   beforeAll(() => {
     Object.defineProperty(process, 'platform', {
-      value: 'win32'
+      value: 'win32',
     });
   });
 
   afterAll(function () {
     Object.defineProperty(process, 'platform', {
-      value: originalPlatform
+      value: originalPlatform,
     });
   });
 
@@ -263,14 +263,14 @@ describe('windows <win32>', () => {
         name: 'max_line_length',
         value: 40,
         level: 'warn',
-        limitComments: true
+        limitComments: true,
       },
       no_trailing_whitespace: {
         name: 'no_trailing_whitespace',
         level: 'error',
         allowed_in_comments: false,
-        allowed_in_empty_lines: false
-      }
+        allowed_in_empty_lines: false,
+      },
     };
 
     const result = coffeelint.lint(coffee, coffeelintConfig);

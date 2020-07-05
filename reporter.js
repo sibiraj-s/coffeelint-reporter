@@ -17,12 +17,12 @@ const cliTableConfig = {
     'mid-mid': '',
     'right': '',
     'right-mid': '',
-    'middle': ''
-  }
+    'middle': '',
+  },
 };
 
 const defaultOptions = {
-  log: true
+  log: true,
 };
 
 const reporter = function (fileName = '', results = [], opts = {}) {
@@ -54,7 +54,7 @@ const reporter = function (fileName = '', results = [], opts = {}) {
         chalk[hasError ? 'red' : 'yellow'](hasError ? errSign : warnSign),
         chalk[hasError ? 'red' : 'yellow']('line ' + result.lineNumber),
         chalk.blue(result.message),
-        chalk.gray(result.context || '')
+        chalk.gray(result.context || ''),
       ]);
     });
 

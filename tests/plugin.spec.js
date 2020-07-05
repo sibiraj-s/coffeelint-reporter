@@ -16,21 +16,21 @@ it('should be able to report via publish method', async () => {
       name: 'max_line_length',
       value: 40,
       level: 'warn',
-      limitComments: true
+      limitComments: true,
     },
     no_trailing_whitespace: {
       name: 'no_trailing_whitespace',
       level: 'error',
       allowed_in_comments: false,
-      allowed_in_empty_lines: false
-    }
+      allowed_in_empty_lines: false,
+    },
   };
 
   const result = coffeelint.lint(coffee, coffeelintConfig);
   const report = {
     paths: {
-      [fileName]: result
-    }
+      [fileName]: result,
+    },
   };
 
   const coffeelintReporter = new CoffeLintReporter(report);
@@ -48,21 +48,21 @@ it('should not execute reporter when filename is not defined', async () => {
       name: 'max_line_length',
       value: 40,
       level: 'warn',
-      limitComments: true
+      limitComments: true,
     },
     no_trailing_whitespace: {
       name: 'no_trailing_whitespace',
       level: 'error',
       allowed_in_comments: false,
-      allowed_in_empty_lines: false
-    }
+      allowed_in_empty_lines: false,
+    },
   };
 
   const result = coffeelint.lint(coffee, coffeelintConfig);
   const report = {
     paths: {
-      '': result
-    }
+      '': result,
+    },
   };
 
   const coffeelintReporter = new CoffeLintReporter(report);
