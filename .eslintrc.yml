@@ -1,6 +1,12 @@
 extends:
-  - standard
   - pegasus
+  - pegasus/node
+
+rules:
+  no-console: off
+  max-lines-per-function:
+    - error
+    - 300
 
 plugins:
   - jest

@@ -1,11 +1,11 @@
 const reporter = require('./reporter');
 
 class CoffeelintReporter {
-  constructor (errorReport) {
+  constructor(errorReport) {
     this.errorReport = errorReport;
   }
 
-  publish () {
+  publish() {
     const reports = this.errorReport.paths;
 
     for (const fileName in reports) {

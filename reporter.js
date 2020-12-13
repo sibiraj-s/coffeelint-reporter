@@ -25,10 +25,10 @@ const defaultOptions = {
   log: true,
 };
 
-const reporter = function (fileName = '', results = [], opts = {}) {
+const reporter = (fileName = '', results = [], opts = {}) => {
   const table = new CliTable(cliTableConfig);
 
-  const options = Object.assign({}, defaultOptions, opts);
+  const options = { ...defaultOptions, ...opts };
 
   const isWin = process.platform === 'win32';
   const warnSign = isWin ? '' : '⚠';
@@ -40,19 +40,24 @@ const reporter = function (fileName = '', results = [], opts = {}) {
   let warnings = 0;
 
   if (fileName) {
-    report = '\n' + chalk.green(chalk.underline(fileName)) + '\n';
+    report = `\n${chalk.green(chalk.underline(fileName))}\n`;
   } else {
     report = '\n';
   }
 
   if (results.length) {
-    results.forEach(function (result) {
+    results.forEach((result) => {
       const hasError = result.level === 'error';
-      hasError ? errors++ : warnings++;
+
+      if (hasError) {
+        errors += 1;
+      } else {
+        warnings += 1;
+      }
 
       table.push([
         chalk[hasError ? 'red' : 'yellow'](hasError ? errSign : warnSign),
-        chalk[hasError ? 'red' : 'yellow']('line ' + result.lineNumber),
+        chalk[hasError ? 'red' : 'yellow'](`line ${result.lineNumber}`),
         chalk.blue(result.message),
         chalk.gray(result.context || ''),
       ]);
@@ -65,7 +70,7 @@ const reporter = function (fileName = '', results = [], opts = {}) {
     report += chalk.green(` ${tickSign} No Problems`);
   }
 
-  report = report.replace(/(\r\n|\r|\n){2,}/g, '$1\n');
+  report = report.replace(/(?:\r\n|\r|\n){2,}/g, '$1\n');
 
   if (options.log) {
     console.log(report);

@@ -196,7 +196,7 @@ describe('linux', () => {
     expect(log).toContain(errSign);
   });
 
-  it('should not throw errors when results are not passed', async () => {
+  it('should not throw errors when results are not passed', () => {
     const fileName = 'file.coffee';
     const log = reporter(fileName, undefined);
 
@@ -248,7 +248,7 @@ describe('windows <win32>', () => {
     });
   });
 
-  afterAll(function () {
+  afterAll(() => {
     Object.defineProperty(process, 'platform', {
       value: originalPlatform,
     });
