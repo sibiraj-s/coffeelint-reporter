@@ -13,6 +13,12 @@ All notable changes to this project will be documented in this file.
 > - Enhancements
 > - Internal
 
+## v2.0.3 (2020-12-13)
+
+#### Internal
+
+- update LICENSE ([9d45142](https://github.com/sibiraj-s/coffeelint-reporter/commit/9d45142))
+
 ## v2.0.2 (2020-04-14)
 
 #### Enhancements
