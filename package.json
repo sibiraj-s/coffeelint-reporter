@@ -21,20 +21,20 @@
     "prepare": "is-ci || husky install"
   },
   "dependencies": {
-    "chalk": "^4.1.1",
+    "chalk": "^4.1.2",
     "cli-table3": "^0.6.0"
   },
   "devDependencies": {
-    "@coffeelint/cli": "^5.0.1",
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
-    "@types/jest": "^26.0.23",
-    "eslint": "^7.28.0",
-    "eslint-config-pegasus": "^2.0.3",
-    "eslint-plugin-jest": "^24.3.6",
-    "husky": "^6.0.0",
+    "@coffeelint/cli": "^5.0.2",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@types/jest": "^27.0.1",
+    "eslint": "^7.32.0",
+    "eslint-config-pegasus": "^2.1.0",
+    "eslint-plugin-jest": "^24.4.0",
+    "husky": "^7.0.2",
     "is-ci": "^3.0.0",
-    "jest": "^27.0.4",
-    "lint-staged": "^11.0.0"
+    "jest": "^27.1.1",
+    "lint-staged": "^11.1.2"
   }
 }
