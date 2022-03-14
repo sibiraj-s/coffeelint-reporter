@@ -1,4 +1,4 @@
-const chalk = require('chalk');
+const colors = require('picocolors');
 const CliTable = require('cli-table3');
 
 const cliTableConfig = {
@@ -40,7 +40,7 @@ const reporter = (fileName = '', results = [], opts = {}) => {
   let warnings = 0;
 
   if (fileName) {
-    report = `\n${chalk.green(chalk.underline(fileName))}\n`;
+    report = `\n${colors.green(colors.underline(fileName))}\n`;
   } else {
     report = '\n';
   }
@@ -56,10 +56,10 @@ const reporter = (fileName = '', results = [], opts = {}) => {
       }
 
       table.push([
-        chalk[hasError ? 'red' : 'yellow'](hasError ? errSign : warnSign),
-        chalk[hasError ? 'red' : 'yellow'](`line ${result.lineNumber}`),
-        chalk.blue(result.message),
-        chalk.gray(result.context || ''),
+        colors[hasError ? 'red' : 'yellow'](hasError ? errSign : warnSign),
+        colors[hasError ? 'red' : 'yellow'](`line ${result.lineNumber}`),
+        colors.blue(result.message),
+        colors.gray(result.context || ''),
       ]);
     });
 
@@ -67,7 +67,7 @@ const reporter = (fileName = '', results = [], opts = {}) => {
   }
 
   if (!warnings && !errors) {
-    report += chalk.green(` ${tickSign} No Problems`);
+    report += colors.green(` ${tickSign} No Problems`);
   }
 
   report = report.replace(/(?:\r\n|\r|\n){2,}/g, '$1\n');

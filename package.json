@@ -21,8 +21,8 @@
     "prepare": "is-ci || husky install"
   },
   "dependencies": {
-    "chalk": "^4.1.2",
-    "cli-table3": "^0.6.0"
+    "cli-table3": "^0.6.0",
+    "picocolors": "^1.0.0"
   },
   "devDependencies": {
     "@coffeelint/cli": "^5.2.4",
