@@ -1,33 +1,11 @@
 const colors = require('picocolors');
-const CliTable = require('cli-table3');
-
-const cliTableConfig = {
-  chars: {
-    'top': '',
-    'top-mid': '',
-    'top-left': '',
-    'top-right': '',
-    'bottom': '',
-    'bottom-mid': '',
-    'bottom-left': '',
-    'bottom-right': '',
-    'left': '',
-    'left-mid': '',
-    'mid': '',
-    'mid-mid': '',
-    'right': '',
-    'right-mid': '',
-    'middle': '',
-  },
-};
+const columnify = require('columnify');
 
 const defaultOptions = {
   log: true,
 };
 
 const reporter = (fileName = '', results = [], opts = {}) => {
-  const table = new CliTable(cliTableConfig);
-
   const options = { ...defaultOptions, ...opts };
 
   const isWin = process.platform === 'win32';
@@ -44,6 +22,8 @@ const reporter = (fileName = '', results = [], opts = {}) => {
   } else {
     report = '\n';
   }
+
+  const table = [];
 
   if (results.length) {
     results.forEach((result) => {
@@ -62,8 +42,10 @@ const reporter = (fileName = '', results = [], opts = {}) => {
         colors.gray(result.context || ''),
       ]);
     });
+  }
 
-    report += table.toString();
+  if (table.length > 0) {
+    report += columnify(table, { showHeaders: false, columnSplitter: '  ' });
   }
 
   if (!warnings && !errors) {
