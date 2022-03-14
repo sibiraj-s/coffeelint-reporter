@@ -13,6 +13,13 @@ All notable changes to this project will be documented in this file.
 > - Enhancements
 > - Internal
 
+## v3.0.0 (2022-03-14)
+
+#### Enhancements
+
+- replace chalk with picocolors ([82fca7c](https://github.com/sibiraj-s/coffeelint-reporter/commit/82fca7c))
+- replace cli-table3 with columnify ([437a8f8](https://github.com/sibiraj-s/coffeelint-reporter/commit/437a8f8))
+
 ## v2.0.3 (2020-12-13)
 
 #### Internal
