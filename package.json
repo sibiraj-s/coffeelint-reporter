@@ -26,15 +26,15 @@
   },
   "devDependencies": {
     "@coffeelint/cli": "^5.2.11",
-    "@commitlint/cli": "^17.3.0",
-    "@commitlint/config-conventional": "^17.3.0",
-    "@types/jest": "^29.2.4",
-    "eslint": "^8.30.0",
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "@types/jest": "^29.5.2",
+    "eslint": "^8.44.0",
     "eslint-config-pegasus": "^3.5.0",
-    "eslint-plugin-jest": "^27.1.7",
-    "husky": "^8.0.2",
+    "eslint-plugin-jest": "^27.2.2",
+    "husky": "^8.0.3",
     "is-ci": "^3.0.1",
-    "jest": "^29.3.1",
-    "lint-staged": "^13.1.0"
+    "jest": "^29.5.0",
+    "lint-staged": "^13.2.3"
   }
 }
